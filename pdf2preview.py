@@ -5,8 +5,7 @@ import io
 import fitz #pip install PyMuPDF
 
 def add_border(image, border):
-    img_with_border = ImageOps.expand(image, border=border, fill="black")
-    return img_with_border
+    return ImageOps.expand(image, border=border, fill="black")
 
 def add_shadow(image, offset, shadow, border):
     total_width = image.size[0] + abs(offset[0]) + 2 * border
